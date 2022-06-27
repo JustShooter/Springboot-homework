@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Create New Horse</title>
+    <script type="text/javascript">
+        function validate() {
+            if (document.forms['horseForm']['Type'].value === "") {
+                alert("Please provide horse type!");
+                document.forms['horseForm']['Type'].focus();
+                return false;
+            }
+            if (document.forms['horseForm']['Age'].value === "") {
+                alert("Please provide horse age!");
+                document.forms['horseForm']['Age'].focus();
+                return false;
+            }
+            if (document.forms['horseForm']['Price'].value === "") {
+                alert("Please provide horse price!");
+                document.forms['horseForm']['Price'].focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Horse</h1>
+    <br/>
+    <form action="#" th:action="@{/save}" th:object="${horse}"
+          id="horseForm" onsubmit="return(validate());"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Horse type:</td>
+                <td><input type="text" th:field="*{type}" id="Type"/></td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="text" th:field="*{age}" id="Age"/></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" th:field="*{price}" id="Price"/></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Save</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

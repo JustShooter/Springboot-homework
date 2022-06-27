@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Horse</title>
+</head>
+<body>
+<div align="center">
+    <h1>Edit Horse</h1>
+    <br />
+    <form th:action="@{/save}" th:object="${horse}"
+          method="post">
+
+        <table border="0" cellpadding="10">
+            <tr>
+                <td>Horse ID:</td>
+                <td>
+                    <input type="text" name="id" th:value="${horse.id}" readonly="readonly" />
+                </td>
+            </tr>
+            <tr>
+                <td>Horse Type:</td>
+                <td>
+                    <input type="text" name="type" th:value="${horse.type}"
+                           required minlength="3" maxlength="30"
+                           pattern="^[А-Яа-яA-Za-z0-9]+(?:\s+[А-Яа-яA-Za-z0-9]+)*$"/>
+                </td>
+            </tr>
+            <tr>
+                <td>Age:</td>
+                <td><input type="text" name="age" th:value="${horse.age}"
+                           required minlength="1" maxlength="30"
+                           pattern="[0-9]+"/></td>
+            </tr>
+            <tr>
+                <td>Price:</td>
+                <td><input type="text" name="price" th:value="${horse.price}"
+                           required minlength="1" maxlength="30"
+                           pattern="[0-9]+"/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Save</button> </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>

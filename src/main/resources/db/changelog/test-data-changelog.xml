@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="2" author="JustShooter" context="test">
+        <comment>Adding test data</comment>
+        <insert tableName="horse">
+            <column name="type" value="Type one"/>
+            <column name="age" value="3"/>
+            <column name="price" value="22000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type two"/>
+            <column name="age" value="4"/>
+            <column name="price" value="23000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type three"/>
+            <column name="age" value="5"/>
+            <column name="price" value="24000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type five"/>
+            <column name="age" value="6"/>
+            <column name="price" value="25000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type six"/>
+            <column name="age" value="7"/>
+            <column name="price" value="25500"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type seven"/>
+            <column name="age" value="8"/>
+            <column name="price" value="26000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Type eight"/>
+            <column name="age" value="9"/>
+            <column name="price" value="19000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Тип один"/>
+            <column name="age" value="2"/>
+            <column name="price" value="1000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Тип два"/>
+            <column name="age" value="3"/>
+            <column name="price" value="2000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Тип три"/>
+            <column name="age" value="4"/>
+            <column name="price" value="3000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Тип четыре"/>
+            <column name="age" value="5"/>
+            <column name="price" value="4000"/>
+        </insert>
+        <insert tableName="horse">
+            <column name="type" value="Тип пять"/>
+            <column name="age" value="6"/>
+            <column name="price" value="5000"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

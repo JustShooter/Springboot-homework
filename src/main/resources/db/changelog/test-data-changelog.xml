@@ -68,5 +68,4 @@
             <column name="price" value="5000"/>
         </insert>
     </changeSet>
-
 </databaseChangeLog>

@@ -23,8 +23,8 @@ public class HorseService {
         horseRepository.save(horse);
     }
 
-    public Horse get(String id) {
-        return horseRepository.findById(Integer.parseInt(id)).orElse(null);
+    public Horse get(Integer id) {
+        return horseRepository.findById(id).orElse(null);
     }
 
     public void delete(Integer id) {

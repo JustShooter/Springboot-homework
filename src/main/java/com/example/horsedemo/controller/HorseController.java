@@ -5,12 +5,9 @@ import com.example.horsedemo.service.HorseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -44,7 +41,7 @@ public class HorseController {
     }
 
     @RequestMapping("/edit/{id}")
-    public String showEditHorsePage(@PathVariable(name = "id") String id, Model model) {
+    public String showEditHorsePage(@PathVariable(name = "id") Integer id, Model model) {
         Horse horse = horseService.get(id);
         model.addAttribute("horse", horse);
 
